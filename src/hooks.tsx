@@ -61,7 +61,8 @@ export const useStyle = (w : number, h : number, scale : number) => {
             }
         },
         blockStyle(i : number) : CSSProperties {
-            const left = `${-size / 2 + (w / 2 - size / 2) * scale * (1 - 2 * i)}px`
+            const sf : number = Math.sin(scale * Math.PI)
+            const left = `${-size / 2 + (w / 2 - size / 2) * sf * (1 - 2 * i)}px`
             const top = `${-size / 2}px`
             const width = `${size}px`
             const height = `${size}px`

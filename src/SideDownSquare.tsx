@@ -12,7 +12,7 @@ const SideDownSquare = (props : SideDownSquareProps) => {
     const {parentStyle, blockStyle} = useStyle(props.w, props.h, props.scale)
     return (
         <div style = {parentStyle()}>
-            {[0, 1].map((i : number) =>  (<div key = {`block_${i}`} style = {blockStyle(i)}></div>))}
+            {[0, 1].map((i : number) =>  (<div onClick={() => props.onClick()} key = {`block_${i}`} style = {blockStyle(i)}></div>))}
         </div>
     )
 }
